@@ -38,9 +38,21 @@ let x = Math.floor(Math.random()*window.innerWidth);
 let y = Math.floor(Math.random()*window.innerHeight);
 let radius = Math.floor(Math.random()*50);
 c.arc(x,y,radius,Math.PI*2,false);
-c.strokeStyle ='orange'
+c.strokeStyle = RandomColors().toString();
 c.stroke();
 requestAnimationFrame(animate);
 }
+// setInterval(() => {
+//     animate();
+// }, 1000);
 
 animate();
+//Function which generates the Random colors..\
+function RandomColors(){
+    let rand1 = Math.floor(Math.random()*256);
+    let rand2 = Math.floor(Math.random()*256);
+    let rand3 = Math.floor(Math.random()*256);
+    return `rgb(${rand1},${rand2},${rand3})`;
+}
+
+//console.log(RandomColors());
