@@ -42,17 +42,12 @@ c.strokeStyle = RandomColors().toString();
 c.stroke();
 requestAnimationFrame(animate);
 }
-// setInterval(() => {
-//     animate();
-// }, 1000);
 
 animate();
-//Function which generates the Random colors..\
+//Function which generates the Random colors..
 function RandomColors(){
     let rand1 = Math.floor(Math.random()*256);
     let rand2 = Math.floor(Math.random()*256);
     let rand3 = Math.floor(Math.random()*256);
     return `rgb(${rand1},${rand2},${rand3})`;
 }
-
-//console.log(RandomColors());
